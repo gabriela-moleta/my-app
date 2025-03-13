@@ -7,28 +7,20 @@ export default function News() {
         <Text style={styles.title}>Últimas Notícias</Text>
         
         <View style={styles.newsSection}>
-        
           <View style={styles.imageContainer}>
-        
-                <Image source={require('../assets/filme.jpeg')} style={styles.newsImage} /> 
-            <View style={styles.placeholderImage}>
-             
-            </View>
+            <Image source={require('../assets/filme.jpeg')} style={styles.newsImage} /> 
           </View>
 
           <Text style={styles.newsTitle}>Prefeitura do Rio vai comprar imóvel onde foi gravado o filme 'Ainda Estou Aqui' e transformar em Casa do Cinema Brasileiro</Text>
           <Text style={styles.newsDate}>06 de Março de 2025</Text>
           <Text style={styles.text}>
-          Segundo o decreto publicado pela Prefeitura do Rio nesta segunda-feira (3), o imóvel na Urca foi declarado de utilidade pública. O texto justifica a ação por levar em conta a relevância da obra de Marcelo Rubens Paiva, autor do livro que deu origem ao filme.
-
-          <br></br>
-
-"(...) Ressalta o dever institucional do Estado de valorizar a memória dos brasileiros que resistiram e superaram o autoritarismo, contribuindo para a retomada da democracia. Outra consideração é o apelo turístico, já que o filme teve reconhecimento internacional", diz um trecho do decreto.
-<br></br>
-
-O proprietário do imóvel que serviu de cenário para o filme está pedindo R$ 14 milhões pela casa. Construída em 1937, a residência de 480 m² passou por uma adaptação para ficar idêntica a que morou a família Paiva, nos anos 1970. O imóvel foi reformado após as gravações.
-<br></br> O filme "Ainda Estou Aqui", que se passa em 1971, conta a história de Eunice (interpretada por Fernanda Torres e Fernanda Montenegro), que estudou Direito e se reinventou como uma das mais importantes ativistas dos Direitos Humanos no Brasil depois do assassinato de seu marido, Rubens Paiva (Selton Mello), pela ditadura militar.
-
+            Segundo o decreto publicado pela Prefeitura do Rio nesta segunda-feira (3), o imóvel na Urca foi declarado de utilidade pública. O texto justifica a ação por levar em conta a relevância da obra de Marcelo Rubens Paiva, autor do livro que deu origem ao filme.
+            <br></br>
+            "(...) Ressalta o dever institucional do Estado de valorizar a memória dos brasileiros que resistiram e superaram o autoritarismo, contribuindo para a retomada da democracia. Outra consideração é o apelo turístico, já que o filme teve reconhecimento internacional", diz um trecho do decreto.
+            <br></br>
+            O proprietário do imóvel que serviu de cenário para o filme está pedindo R$ 14 milhões pela casa. Construída em 1937, a residência de 480 m² passou por uma adaptação para ficar idêntica a que morou a família Paiva, nos anos 1970. O imóvel foi reformado após as gravações.
+            <br></br> 
+            O filme "Ainda Estou Aqui", que se passa em 1971, conta a história de Eunice (interpretada por Fernanda Torres e Fernanda Montenegro), que estudou Direito e se reinventou como uma das mais importantes ativistas dos Direitos Humanos no Brasil depois do assassinato de seu marido, Rubens Paiva (Selton Mello), pela ditadura militar.
           </Text>
         </View>
       </ScrollView>
@@ -42,6 +34,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
   },
   content: {
+    flexGrow: 1,
     padding: 20,
   },
   title: {
@@ -77,12 +70,13 @@ const styles = StyleSheet.create({
     color: '#555',
     lineHeight: 24,
   },
-  newsImage: {
+  imageContainer: {
     alignItems: 'center',
-    justifyContent: 'center',
-    marginLeft: "22%",
-    marginBottom: 30,
+    marginBottom: 20,
   },
-
-
+  newsImage: {
+    width: '100%',
+    height: 200,
+    borderRadius: 10,
+  },
 });

@@ -1,23 +1,19 @@
-import { View, Text, StyleSheet, SafeAreaView, Image } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, Image, ScrollView } from 'react-native';
 
 export default function Home() {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
-        
+      <ScrollView contentContainerStyle={styles.content}>
         <View style={styles.imageContainer}>
-          
-              <Image source={require('../assets/filmes.png')} style={styles.image} /> 
-          
+          <Image source={require('../assets/filmes.png')} style={styles.image} /> 
         </View>
 
-        
         <Text style={styles.title}>Bem-vindo! 🍿</Text>
         <Text style={styles.subtitle}>App de Filmes e Séries</Text>
         <Text style={styles.text}>
-      Seu guia de filmes e séries brasileiros! Explore histórias únicas, clássicos e novidades da nossa cultura. Confira agora!
+          Seu guia de filmes e séries brasileiros! Explore histórias únicas, clássicos e novidades da nossa cultura. Confira agora!
         </Text>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -28,24 +24,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFF',
   },
   content: {
-    flex: 1,
+    flexGrow: 1,
     alignItems: 'center',
     padding: 20,
   },
   imageContainer: {
     marginBottom: 20,
+    alignItems: 'center',
   },
-  placeholderImage: {
+  image: {
     width: 200,
     height: 200,
-    backgroundColor: '#ddd',
-    justifyContent: 'center',
-    alignItems: 'center',
     borderRadius: 10,
-  },
-  placeholderText: {
-    color: '#666',
-    fontSize: 16,
   },
   title: {
     fontSize: 28,

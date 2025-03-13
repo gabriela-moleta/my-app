@@ -1,9 +1,9 @@
-import { View, Text, StyleSheet, SafeAreaView, Image } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, Image, ScrollView } from 'react-native';
 
 export default function Profile() {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
+      <ScrollView contentContainerStyle={styles.content}>
         {/* Espaço para imagem de perfil */}
         <View style={styles.imageContainer}>
           <View style={styles.placeholderImage}>
@@ -32,7 +32,7 @@ export default function Profile() {
           <Text style={styles.infoLabel}>Ocupação:</Text>
           <Text style={styles.infoText}>Empresária e empreendedora</Text>
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -43,17 +43,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
   },
   content: {
-    flex: 1,
+    flexGrow: 1,
     alignItems: 'center',
     padding: 20,
   },
   imageContainer: {
     marginBottom: 20,
+    alignItems: 'center',
   },
   placeholderImage: {
     width: 150,
     height: 150,
-    backgroundColor: '#ddd',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 75,
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: '#FF0000', // Corrigido o caractere extra
+    color: '#FF0000', 
     marginBottom: 20,
   },
   infoCard: {
