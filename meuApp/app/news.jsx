@@ -73,6 +73,8 @@ const styles = StyleSheet.create({
   imageContainer: {
     alignItems: 'center',
     marginBottom: 20,
+    width: '30%',
+    justifyContent: 'center',
   },
   newsImage: {
     width: '100%',

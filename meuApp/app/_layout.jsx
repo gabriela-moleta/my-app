@@ -38,13 +38,22 @@ export default function Layout() {
             <Ionicons name="newspaper" size={size} color={color} />
           ),
         }}
-      />
+      /> 
       <Tabs.Screen
         name="profile"
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="person" size={size} color={color} />
+          ),
+        }}
+/>
+        <Tabs.Screen
+        name="favorites"
+        options={{
+          tabBarLabel: 'Favorites',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="heart" size={size} color={color} />
           ),
         }}
       />
